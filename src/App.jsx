@@ -14,12 +14,12 @@ import {
   ShieldCheck,
   ShieldQuestion,
   GraduationCap,
-  Briefcase
+  Briefcase,
+  ExternalLink
 } from 'lucide-react';
 
 const App = () => {
   const [scores, setScores] = useState(new Array(6).fill(0));
-  const [submitted, setSubmitted] = useState(false);
 
   const categories = [
     {
@@ -301,25 +301,49 @@ const App = () => {
           <p className="text-slate-600 mb-8 max-w-lg mx-auto">
             Schedule a structured AI-First Discovery Session. We calculate opportunity before you invest.
           </p>
-          <button className="bg-[#D97706] hover:bg-[#B45309] text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform transition active:scale-95 flex items-center gap-3 mx-auto">
-            Schedule Discovery Session
-            <ArrowRight className="w-5 h-5" />
-          </button>
-          <p className="mt-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+            <a
+              href="https://calendly.com/support-lyq/ai-strategy-audit"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#D97706] hover:bg-[#B45309] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform active:scale-95 flex items-center justify-center gap-3"
+            >
+              Schedule Discovery Session
+              <ArrowRight className="w-5 h-5" />
+            </a>
+
+            <a
+              href="https://www.growthaspire.com/ai-bootcamp-business"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-white border-2 border-[#0F1F2E] text-[#0F1F2E] hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all transform active:scale-95 flex items-center justify-center gap-3"
+            >
+              Know About Program
+              <ExternalLink className="w-5 h-5" />
+            </a>
+          </div>
+
+          <p className="mt-12 text-xs font-bold text-slate-400 uppercase tracking-widest">
             AI-First Readiness Scorecard™ &copy; 2024
           </p>
         </section>
       </div>
 
       {/* Floating Action Bar (Mobile only or persistent) */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden flex justify-between items-center z-50">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden flex justify-between items-center z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <div>
-          <span className="text-xs font-bold text-slate-400 block">SCORE</span>
+          <span className="text-[10px] font-bold text-slate-400 block uppercase">SCORE</span>
           <span className="text-xl font-black text-[#0F1F2E]">{totalScore}/30</span>
         </div>
-        <button className="bg-[#0F1F2E] text-white px-6 py-2 rounded font-bold text-sm">
-          Book Audit
-        </button>
+        <a
+          href="https://calendly.com/support-lyq/ai-strategy-audit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#0F1F2E] text-white px-5 py-2.5 rounded-lg font-bold text-sm"
+        >
+          Book Discovery
+        </a>
       </div>
     </div>
   );
