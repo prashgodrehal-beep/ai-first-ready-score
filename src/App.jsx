@@ -314,18 +314,18 @@ const App = () => {
             </a>
 
             <a
-              href="https://www.growthaspire.com/ai-bootcamp-business"
+              href="https://www.growthaspire.com/ai-sales-masterclass/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-white border-2 border-[#0F1F2E] text-[#0F1F2E] hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all transform active:scale-95 flex items-center justify-center gap-3"
             >
-              Know About Program
+              Register live masterclass now
               <ExternalLink className="w-5 h-5" />
             </a>
           </div>
 
           <p className="mt-12 text-xs font-bold text-slate-400 uppercase tracking-widest">
-            AI-First Readiness Scorecard™ &copy; 2024
+            AI-First Readiness Scorecard™ &copy; 2026
           </p>
         </section>
       </div>
